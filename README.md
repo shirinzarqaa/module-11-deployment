@@ -16,16 +16,20 @@
 **2. Try deploying the Spring Petclinic REST using Recreate deployment strategy and document your  attempt.**
 
 - recreate pada springboot-petclinic-rest yang telah di scaled
+  
   ![image](https://github.com/shirinzarqaa/module-11-deployment/assets/110030938/cb66133d-e1db-4cae-a777-754aeb776fe5)
 
 - Memanfaatkan replikaset yang akan menggantikan pod yang dihapus dengan templatenya dan diubah ke versi 3.2.1
+  
   ![image](https://github.com/shirinzarqaa/module-11-deployment/assets/110030938/b66b8fe4-a628-4724-ae79-119ffa33486c)
 
 - Mengecheck keberhasilan perubahan
+  
   ![image](https://github.com/shirinzarqaa/module-11-deployment/assets/110030938/547e839e-a170-4f5a-a381-49beefa6c218)
   ![image](https://github.com/shirinzarqaa/module-11-deployment/assets/110030938/f4ed8976-8be9-444e-acd9-14975235b3ab)
 
 - delete pod
+  
   ![image](https://github.com/shirinzarqaa/module-11-deployment/assets/110030938/973173a7-f952-448c-b178-1e76cc9f8621)
 - Buat pod baru untuk mengganti pod sebelumnya dan output dari program pada saat di run
   ![image](https://github.com/shirinzarqaa/module-11-deployment/assets/110030938/d8862d68-9a0f-42ee-a4d7-99be67d0253c)
