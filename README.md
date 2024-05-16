@@ -13,6 +13,10 @@
 
 **1. What is the difference between Rolling  Update and Recreate Deployment Strategy?**
 
+Perbedaan utama antara strategi pembaruan rolling update dan strategi recreate deployment yaitu pada recreate deployment akan terjadi downtime saat pembaruan aplikasi karena strategi ini mengharuskan menghapus aplikasi yang lama terlebih dahulu, kemudian mendepoy aplikasi yang baru. Oleh karena itu, akan ada waktu henti antara penghapusan dan penyelesaian deploy. 
+
+Sebaliknya, rolling update mengubah aplikasi secara bertahap ke versi terbarunya. Dengan strategi ini, sebagian kecil instance dari aplikasi yang berjalan akan diperbarui satu per satu. Hal ini memastikan bahwa selama proses pembaruan, sebagian besar instance dari aplikasi tetap aktif dan melayani permintaan pengguna, sehingga mengurangi atau bahkan menghilangkan downtime. Strategi rolling update lebih disukai dalam situasi di mana kontinuitas layanan sangat penting dan downtime harus diminimalkan.
+
 **2. Try deploying the Spring Petclinic REST using Recreate deployment strategy and document your  attempt.**
 
 - recreate pada springboot-petclinic-rest yang telah di scaled
@@ -52,7 +56,9 @@
 
 
 **4. What do you think are the benefits of using Kubernetes manifest files?**
+Penggunaan file manifest Kubernetes memiliki beberapa manfaat utama. Pertama, file manifest memungkinkan untuk mendefinisikan keadaan yang diinginkan dari klaster Kubernetes secara deklaratif. Dengan demikian, kita cukup menyatakan apa yang diinginkan tanpa perlu menulis kode imperatif. File manifest juga berbasis YAML atau JSON, yang membuatnya mudah dipindahkan dan digunakan kembali di berbagai lingkungan seperti pengembangan, pengujian, dan produksi. Selain itu, file manifest memungkinkan otomatisasi proses penyebaran dan pengelolaan aplikasi, mengurangi kesalahan manual dan meningkatkan efisiensi.
 
+Manfaat lainnya termasuk kemudahan integrasi dengan sistem version control seperti Git, yang memungkinkan pelacakan perubahan, kolaborasi, dan rollback ke versi sebelumnya. Penggunaan file manifest memastikan konsistensi konfigurasi di seluruh anggota tim dan tahap siklus pengembangan, serta meningkatkan reproduksibilitas lingkungan. File manifest juga berfungsi sebagai dokumentasi langsung dari konfigurasi dan pengaturan klaster, memudahkan pemahaman dan pemeliharaan oleh tim yang berbeda. Dengan demikian, file manifest Kubernetes membantu meningkatkan keandalan, efisiensi, dan ketahanan dari proses pengelolaan dan penyebaran aplikasi.
 
 
 
